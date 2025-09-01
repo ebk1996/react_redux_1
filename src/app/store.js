@@ -7,11 +7,13 @@ import counterReducer from '../features/counter/counterSlice';
 import postReducer from "../features/posts/postsSlice";
 //Import Users
 import usersReducer from "../features/users/usersSlice";
+import authReducer from '../features/users/authSlice'
 // Create the Redux store
 // The 'counter' key will be available in the global state as state.counter
 export const store = configureStore({
   reducer: {
-    // counter: counterReducer, // Attach the counter slice reducer
+  counter: counterReducer, // Attach the counter slice reducer
+  auth: authReducer,
     posts: postReducer,
     users: usersReducer
   },
